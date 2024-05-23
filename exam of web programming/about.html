@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .image-slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .image-slideshow {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .image-slide {
+            min-width: 100%;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <marquee><h1 style=" margin-left: 150px; font-size:54px;">FITNESS AND NUTRITION COACHING</h1></marquee>
+    <div style="margin-top:10px;font-size:30px ;background-color: black;color: black;">
+        <a href="index.html" style="color: aliceblue;">HOME</a>...............
+        <a href="service.html" style="color: aliceblue;">ABOUT</a>...............
+        <a href="about.html" style="color: aliceblue;">PRODUCT</a>...............
+        <a href="contact.html" style="color: aliceblue;">CONTACT</a>
+    </div>
+    <center><h1 style="color: blue;"> OUR SERVICES OR PRODUCT</h1></center>
+    <h3>Personalized Nutrition Plans: Tailored meal plans designed to meet individual dietary needs and goals. This may include weight loss, muscle gain, or specific dietary requirements (e.g., vegetarian, gluten-free).</h3>
+    
+    <div class="image-slideshow-container">
+        <div class="image-slideshow">
+            <div class="image-slide"><img src="image9.png" style="width:500px;height:300px;"></div>
+            <div class="image-slide"><img src="image10.png" style="width:500px;height:300px;"></div>
+            <div class="image-slide"><img src="image13.png" style="width:500px;height:300px;"></div>
+            <div class="image-slide"><img src="image14.png" style="width:500px;height:300px;"></div>
+            <div class="image-slide"><img src="image15.png" style="width:500px;height:300px;"></div>
+            <div class="image-slide"><img src="image16.png" style="width:500px;height:300px;"></div>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var slides = document.querySelectorAll('.image-slide');
+            slideIndex++;
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            var slideWidth = slides[0].clientWidth;
+            var offset = -slideWidth * slideIndex;
+            document.querySelector('.image-slideshow').style.transform = 'translateX(' + offset + 'px)';
+            setTimeout(showSlides, 4000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+</html>
